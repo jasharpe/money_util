@@ -16,9 +16,9 @@ if __name__ == "__main__":
       if parsing_symbols:
         symbol_to_cents[row[0]] = int(row[market_value_index].replace('.', ''))
       elif len(row) > 0:
-        if row[0] == "Total Account Value":
+        if row[0] == "Total Value":
           total_cents = int(row[1].replace('.', ''))
-        elif row[0] == "Cash Balance (after settlement)":
+        elif row[0] == "Cash":
           total_cash_cents = int(row[1].replace('.', ''))
         elif row[0] == "Symbol":
           parsing_symbols = True
